@@ -2,7 +2,9 @@
 <html>
 <body>
 
+<h1>Welcome to my website</h1>
 <p>verion number 1.0.0.0.0.0.0.0.4</p>
+<p>Here are some buttons</p>
 <button type="button" onclick="alert('hello world')">Epic Button</button>
 <button type="button" onclick="alert('ping')">The Epicer Button</button>
 
@@ -30,6 +32,31 @@ alert('hello there');
 
 <button type="button" onclick="test_var++">press me to increment test_var</button>
 
+<h3>Technical stuff</h3>
+<p id="window.innerHeight"></p>
+<p id="window.innerWidth"></p>
+<p id="window.screen.width"></p>
+<p id="window.screen.height"></p>
+<p id="window.screen.availWidth"></p>
+<p id="window.screen.colorDepth"></p>
+<p id="window.screen.pixelDepth"></p>
+<p id="window.location.href"></p>
+<p id="window.location.hostname"></p>
+<p id="window.location.pathname"></p>
+<p id="window.location.protocol"></p>
+
+<script>
+document.getElementById("window.innerHeight").innerHTML = "window.innerHeight = " + window.innerHeight;
+document.getElementById("window.innerWidth").innerHTML = "window.innerWidth = " + window.innerWidth;
+document.getElementById("window.screen.width").innerHTML = "window.screen.availWidth = " + window.screen.width;
+document.getElementById("window.screen.availWidth").innerHTML = "window.screen.availWidth = " + window.screen.availWidth;
+document.getElementById("window.screen.colorDepth").innerHTML = "window.screen.colorDepth = " + window.screen.colorDepth;
+document.getElementById("window.screen.pixelDepth").innerHTML = "window.screen.pixelDepth = " + window.screen.pixelDepth;
+document.getElementById("window.location.href").innerHTML = "window.location.href = " + window.location.href;
+document.getElementById("window.location.hostname").innerHTML = "window.location.hostname = " + window.location.hostname;
+document.getElementById("window.location.pathname").innerHTML = "window.location.pathname = " + window.location.pathname;
+document.getElementById("window.location.protocol").innerHTML = "window.location.protocol = " + window.location.protocol;
+</script>
 
 </body>
 </html>
