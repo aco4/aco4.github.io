@@ -37,10 +37,10 @@ function setTestVar(amount) {
 }
 function increaseTestVar(amount) {
   testVar = testVar + amount;
+  document.getElementById("test_var_counter").innerHTML = "testVar = " + testVar;
   if (testVar == 69) {
     alert('congratulations on reaching the funny number! you may now laugh');
   }
-  document.getElementById("test_var_counter").innerHTML = "testVar = " + testVar;
 }
 function multiplyTestVar(multiplier) {
   testVar = testVar * multiplier;
