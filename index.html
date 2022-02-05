@@ -1,96 +1,166 @@
 <!DOCTYPE html>
-<html lang="en-us">
+<html lang="en-us" id="html">
   <head>
     <title>Anthony's Website</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <style>
-    html {
-      background-color: #008CBA;
-    }
-    body {
-      margin: 0px;
-    }
-    h1 {
-      margin: 2px;
-    }
-    h5 {
-      margin: 2px;
-    }
-    .centerNested {
-      width: 50%;
-      margin: auto;
-      background: white;
-      padding: 10px;
-      box-shadow: 0px 0px 50px black;
-    }
-    .headerBar {
-      position: relative;
-      height: 60px;
-      background: white;
-      box-shadow: 0px 5px 10px black;
-    }
-    button {
-      background-color: #008CBA;
-      border: 2px solid #008CBA;
-      color: white;
-      padding: 15px 32px;
-      text-align: center;
-      text-decoration: none;
-      display: inline-block;
-      font-size: 16px;
-      margin: 4px 2px;
-      cursor: pointer;
-      transition-duration: 0.4s;
-    }
-    button:hover {
-      background-color: #FFFFFF;
-      color: #008CBA;
-    }
-    .tooltip {
-      position: relative;
-      display: inline-block;
-      border-bottom: 1px dotted black;
-      margin: auto;
-    }
-    .tooltip .tooltiptext {
-      visibility: hidden;
-      width: 120px;
-      background-color: black;
-      color: #fff;
-      text-align: center;
-      border-radius: 6px;
-      padding: 5px 0;
-      position: absolute;
-      z-index: 1;
-      bottom: 150%;
-      left: 50%;
-      margin-left: -60px;
-    }
-    .tooltip .tooltiptext::after {
-      content: "";
-      position: absolute;
-      top: 100%;
-      left: 50%;
-      margin-left: -5px;
-      border-width: 5px;
-      border-style: solid;
-      border-color: black transparent transparent transparent;
-    }
-    .tooltip:hover .tooltiptext {
-      visibility: visible;
-    }
+      html {
+        background-color: gray;
+      }
+      body {
+        margin: 0px;
+      }
+      h1 {
+        margin: 4px 0px 4px 0px;
+        font-size: 40px;
+      }
+
+      h2 {
+        margin: 10px 0px;
+      }
+
+      h5 {
+        margin: 2px;
+      }
+
+      .versionNum {
+        margin: 0px;
+        font-size: 14px;
+      }
+
+      .center {
+        display: block;
+        max-width: 100%;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      .header {
+        position: relative;
+        height: 100px;
+        background: darkgray;
+/*         box-shadow: xPos yPos blur color*/
+        box-shadow: 0px 0px 10px black;
+        padding: 10px;
+      }
+
+      .footer {
+        position: relative;
+        height: 100px;
+        background: darkgray;
+/*         box-shadow: xPos yPos blur color*/
+        box-shadow: 0px 0px 10px black;
+        padding: 10px;
+      }
+
+      button {
+        box-shadow: 0px 2px 2px black;
+        background-color: red;
+        border: 2px solid red;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        display: inline-block;
+        font-size: 16px;
+        margin: 4px 2px;
+        cursor: pointer;
+        transition-duration: 0.4s;
+      }
+      button:hover {
+        background-color: #CC0000;
+        color: white;
+      }
+
+/*      button:press {
+        border: 2px solid white;
+      }*/
+
+      .rateButton {
+        background-color: gold;
+        border: 2px solid goldenrod;
+/*         padding: (TOP/BOTTOM) (LEFT/RIGHT)*/
+        padding: 6px 10px;
+      }
+
+      .rateButton:hover {
+        background-color: yellow;
+        border: 2px solid lightgoldenrodyellow;
+        color: black;
+      }
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        border-bottom: 1px dotted black;
+        margin: auto;
+      }
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        border-radius: 6px;
+        padding: 5px 0;
+        position: absolute;
+        z-index: 1;
+        bottom: 150%;
+        left: 50%;
+        margin-left: -60px;
+      }
+      .tooltip .tooltiptext::after {
+        content: "";
+        position: absolute;
+        top: 100%;
+        left: 50%;
+        margin-left: -5px;
+        border-width: 5px;
+        border-style: solid;
+        border-color: black transparent transparent transparent;
+      }
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+
+      .main {
+        display: block;
+/*         width: 800px; */
+/*         height: 900vh; */
+        max-width: 800px;
+/*         min-width: 100%; */
+/*         max-height: 50vh; */
+        margin-left: auto;
+        margin-right: auto;
+        background: lightgray;
+/*         padding causes scrollbar to appear when width is present. max-width is fine though.*/
+/*         padding: TOP RIGHT BOTTOM LEFT; */
+        padding: 15px 15px 15px 15px;
+        box-shadow: 0px 0px 10px black;
+      }
+
+      .teachBox {
+        max-width: 80%;
+        background-color: lightyellow;
+        padding: 5px 10px;
+        margin: 20px 80px;
+      }
+
+/* ;overflow-x:scroll */
+
+
     </style>
   </head>
   <body>
-    <div class="headerBar"></div>
-    <div class="centerNested">
-      <br>
-      <h1>Welcome to my website</h1>
-      <div class="tooltip">Add me on Discord<span class="tooltiptext">Crayola#2819</span></div>
-      <h5>version number 1.0.0.0.0.0.1.0.0</h5>
-      
-      <img src="data:image/jpeg;base64,/9j/4AAQSkZJRgABAQAAAQABAAD/2wCEAAoHCBUSFRgSFRUYGRgYGRgcGBoYGBgZGBwYGBgaGhgaGRgcIS4lHB4rHxgYJjgmKy8xNTU1GiQ7QDs0Py40NTEBDAwMEA8QHhISHjEjISE0NDQxNDQ0NDE0MTExNDQ0NDQ0NDQ0MTE0MTQxNDQxNDE0NDQ0NDQxPzRANDQ0MTQxP//AABEIANMA7wMBIgACEQEDEQH/xAAbAAABBQEBAAAAAAAAAAAAAAACAAEDBAUGB//EADYQAAEDAgUCAgkEAgIDAAAAAAEAAhEDIQQSMUFRBWFxgQYTIjKRobHB8BRC0eFS8YKSBxVi/8QAGgEAAwEBAQEAAAAAAAAAAAAAAAECAwQFBv/EACcRAAICAgMAAQMEAwAAAAAAAAABAhEDIQQSMUETIjIFFFFhI6Hh/9oADAMBAAIRAxEAPwDahKEcJQqACE0I4ShAAwlCKEoSACEoRwmQAMJoRwlCAAhKEUJQgCMhPlRQlCAAhNlRwmhAAQmhHCUIAjhKEZCYhAEZCUI4TQgAITQjhNCABhNCNMQgAYTQihKEABCYhHCaEwNQtShSQmyoAjIShHlTwgCOFBXxTKZhzwDqRInsrLwYMawY8YsvLOudQe4uYXGcxLttNB4KJNrwqKs9AZ1ik4+9b/KxCvMeHCWkEdjZeL08S9hsSPNdN6P9SqNe3JufaZs6e2xU9q9HV+HomVKETDIkgg7gi4KULRSTVohgQlCPKllQBFCUK9hunvqX0A1Jt8OVpUelMiCcx5+wXPk5WOGm7f8ARSi2c+QmhdE7oVOTJdroDAA4UbugMvD3j4H7KP3mP+w6swITQtZ/QHAezW/7NH2UL+jVhEOY74t/lWuVifyHVmcQmIUWJxPq3FtRjmxvEtPgVJSqtf7pBW0ZxkrTFQiExCMhMQrEBCUIoQVHholxAHdIBoShZWJ69SZ7oL/ABPheu06jxTIcxx0Dhr5pdkPqzTITQihMQqECkUUJkAbEJoUmVNlQICEoRkJQgAIXBemPo+5pdXYJabuA/aefBegQhewOBa4SCIIPCTVjTo8e6Z0Z9d2VrbxJ2ho1cfPRd103AsoMZTyibZnADM4jn4rTo9NFCm5rBGZ5MjXL+0E8BUiSBrINu/gvE5eebm4+JHXiimrNzpxcGwRmaZgEyVPUwzgRAmdFQ6VSeSHMaRcAi8QeSbLrcHhi0e0RP0WXH5M8T1tE5IJmPQ6a9+oyjk/YbrWwvTWU7wS7k/YK1m/OEDHyePv8Vpl5k568RCikSOpz/CTGBoiboXVYB3O/iqr8RA1iVzNxW/kpWy28TuhcIVF+IABJdmI2Fm9vFV3Y902jwBufjoEnkQKLNGo8jnwA+SjNUGwMHuVWY90ZjA/5SPmk6s1sANkwZiAB4pdh0SVqbagyuDXA6giVzHVPRUEmpQJY7Zs+yT9ltipHHygee6sYYh0Bsd+yuGeUHpg4nEYDE4gP9TWpPzaZg0kdpi3muhq9OexhqPLWgAkgm8DwW/VeymJLgOdvmud69iv1FCoxriGlsZm6k2Nj5arrX6jJtRSI+nezl8d6SU2A5buBgDefBcxjuqvcS+oZGrackSeXcBZL8R6oluWHy4OJkukGLHYrPqVS4yvUW9k6RfrdYqOETAtZth4JdNxD3vYyZl7YBkmZ1CzWiV23oX0JwcMS8QADkBFzP7o4VUTZ2YCYhSQmhaEkcJiFJCaECs24TQpCE0JgRwlCkhKEARwmhSQlCQAFoIg6Knh+lGo8t0A1PH9q/C1aFMMbr4neV5P6jCCqS9f+zfDJq0S4XDhjQ2LARfeBqVO4nso2PsTNu/AURqgydI7W4svL7JKvkvb2BingCCY7zZVszwybT+2/zVdk1DmLvYExoiq17n3tgIH0hRfyXRm4zEuBDSS48NBHz1J8FA/FvabjLw28+Ljsr7qwkAAMF+C8nckqq/DveS4uDQdmkabZnO/lVFIdlOrXLoAncku38Ap6FQi4YexNpPaU9fC+rlzWh8WJMzm4E6qpicQ4AzqZaO430TpD9LT+oO0gvOuth3JQuxTz77r7Bot2l0rJYwgXzEnaYCTsQPdLpjYun6KqCjTZWjV3yGWPNaOHx5j2YJNosAO9tQuZN9/K331VbFvcwAhzpGgtEHujomFWdLi4Ml9SYg66WiIWZica0SW2toLfJYv68xc3Pmge8HXVNY2vSlEyPSLpvrnGo1uVx22MeG/dco+k5pLXAyF37hIKOh00VHBuWfJejg5ElUasynjXpk+inoyKw9dVnJMBumaNyeF6A1gAAAgCwA0gaJsNRFNoaNApYXpwTrZyydsjITEIyEoVkkcJQpEKANshNCkhNCZIEJQjhNCTKBhKEUJoQBLhWS6ToLlaIdm8Pn4oMLhczY51P2UrKYpmOBck8rxuZGeSXevtWv8AptBpa+SHFVHe6IgQL8lVH1mU2S60k3I2n+pUuIfItprN9RMeSyut1wGZXB+m1hEDdeZW7N0vggoYkOzQ4S46m1iduLKlicYAYku4jNHgIUOGxjWMcGZi4+8YnK0bKmcXqABl4m58hdVGOyqLbsUWAwwDlzrkd76FQvxRcQXEmPdbBA7E3lU5c82AG8EfPWU7y4awPOPmbladSqJn4pxPtEnufdHloU5xV8wMn/6jygbKs5zQLvvw0kqMvGkfAQT/AAjqhliq4u1M+OgUQgWEE9hEeGl0JDYkhwGgk6psk6EjtAH0VICX122kakm/mVC9k8uJ8ghaxp0cZHJsnzRaPzxTEZtWllJLRHISpVCbFXasHiUAo9ld6HZYw2GLuy28A0NOULOwL/Zur2HPthPDJqaa/kyybTNEhNCkIQkL3ziAITQpITEIAjITEKSEJCAN2ExCKEiEyQIShEQmhAAp2NkgJQocZWdTp1KjRLmMe8DktaSPmplpMo3sLiqZzU2Oa4sIDwDOUnY91D1B8AnS2wk2Oy8z/wDGGKea1aT7Ja0u7vkk33N13+Nf7MnSBqY3n7Lk5dRwNFw/IznPe9xIJAvAiB5wVjdcxTnvADpFwQXTf+FsMqkvexoaIyucbn4HdYNduauYuMwN9DaTPF14MVR2L0ma11NoDSWti5AEk7y8rOr5s2uYbyJI8CQreJq2aWtF2iXbd7TACzXvdPvA94Py2VxspIVV8Wzgdt/CIskx+wdPOa4+CBr3E+0ZjnT+E+eTds8dvDhaUMJ5ymwk7xt48IM7v2+caeZ3RGnu61/d+6jzk6G3OySAIk63Pjr2twgAI1jy1+JTEnxPA38VYoYWbu1348AFvhwvI6RnOfUrOe0izZ7x+BM1+0R4yFqPYyIgIKuGbUBA8v6XVLhpLT2ZLNsoBvH9I2DlBlc05XiVK2dlwSi4umbp2rJcMYsrtM+00qowqzTdceKcPyRE/DdhDCMaJEL6BeHERwmhGQmhUAEJiEZCYhAG2kqhe+UfriNUuwqJ4TEKEYjlL9SE+yCiYhSYdjXS1wkOBafA2KreuCQxbWX7j6rOb+1jSdlDp/RKeCc4U5hxJvcibxKuY5xewgSYIGm41lS9Rr+37ALuAP8AIEanhUmUsjHNJLtXO1NzsvN52aMoqMXZtji07ZnYzqDaFOs9xEMgZjvaI+vxC8wr+llUPc5gAaZgESYPJXaenj82ELWiLlzh3BkX8JXk7TKXBwQlBykrZWSTT0dph/Sqk8Na9haYjUlsp8R6RUGD2CXHcAfcriiEy6f2mO7RP1ZpUdA70neXe60NnQa/FdNgcUKrQ8OgHQ7rzhdX6JMJaZPszbieVnycMIwtaorFOTlTOlDgLXM/Md0i4nUQO4+iaToSO4GpTZxPvfH+F5qOoNhhwaABMk3uQFcpPss1z4c08k38QrjHW0helxKUTmy+nJelHWn5/VscW5dSDclWvRLrj6jzTec0CWnc8h3Kp+kfRnueajBM6gayp/RTo76b/WPtaA3fuSuy9GNbOsx7Zh3CgDTzb5o8a6wChpuH9Ly+VXc6cX4k9MQdVZZqPEKsyLQIlaHTGy8dlhij2mkE3SNwCyRCIpivoDiAITQiKYpjBhMQiKYoAvuehJlWsgSyBZjK2Xsl6tWcgTFgQBXNNQV25Wl3+N7awDJhXiAgewOBbyCPiokrTRUXTRUxWIOrYgkERfwJ+Kr03e+CTJmPgPvKFlcMpsloFi2OC32ftKoPxJDgLkxHjN7L5ySak0zsr4IPSTDCox7BF4JjSC2AvK6lAUiWRLgYJPPZewYthN3WBb7UcD3QuQ630Zlb2m2cNTyF2cXOofa/GXj6p20cUXFQ1GA3Fitmp0Os39s8QlR6BVN3Ngcleis0Fuy5xjJUzEw2GdUcGAXJXe9MwopUwzQDUmZuqmA6UKcEanU8/wBLVDLCCCfH7Lj5OfvpeHPDH1YnP4B8h80ncxP1+iZziNx9EPsjSfIn7LlRqO+p4efKnpVA4d/3AfZVg88AhJrQDIMHst8OXo/6M5x7FzKCE7SAqud3A+OVBVl1zYcC48+V1vkRS0Y9HYdV5ddpsFKz84WRjOqsp2mT25HPCrYHruZ4a5sA6X3XLKE5/c0dMYOtHStIPZX8ATNuFm0nzda3TWTJS46/yIyyfiWvWvT+ucpS0JZAvXs5aAGIKX6ko8gQ+rCdsKF+oKY1ynNIJsqLYUdN6pCWKdz5/NlE8yh18CIiE2VGQllQMjyJw1EUMKQMrqGFjOdnEHsHAX8J1VOnSDWZ3e8dOY8fJdBVphwg+KxuqNnbwXjcyDjkb/k6YSclRUx+KzQALDRZr1Zc75aKCoFypG6VaK7zfVB4qVwF1HA0VARvH52UT5aLf33Vh/8ACYnfsmUVs3aZ/NUw5AARubseZUTmQfFWiROKGJ/2R8kObYjzRiIvp8fmmAzR+aqj1TEerYSJkkCxgwdwVb02n6rm+vVSX5IgC4PM7rfBHtIErZlvcSSSST31RMO6jVnCUy9zWgakfK5XoPSOhaO5wT5Y0nXKJ72+q3Omn2Te6wqbgI/PBavTn2uuHA6y2cOXaNMkpZiom1VIHgr0rOagsxSzFCZCQcnYwwTqnBSpu2O6TmQgR1BTFJO0SVRIg3dCbonm6FAxsqWVIkoSSpATmrN6lgJBcNtR/C0JKbHPDWQuDnyjGG1v4NcafY5F7Ynsq7jBRYzF5XOnRQMxLXixHhuvMirVnX4FYlRkJi+EsydBYJ0QuCJ2qGfhdOh2DPy3QOFjwmL/APSZ74lNIQD6YA7KJ7BFhHbZSZ7R3AQF0FUgBe+358lynWXE1HSOPpqusqPkWCz8Z09taDcEA/DgrpwSUZWwi6ezlQF0/RsDkbmcIc7TsOAiwPSabDJlztp0HgFoOYXhwBy2MHhaZcyl9qKnO1SM+pi/bIn3TA8lt4StbVctRwha4ybzdbOGJC0hjUWpHLKV6NxlcqVmJWUx5U7HldCZnRqsxUeCmNXcaLKa9WKD5sd1V2S0XhWVgPzCd91lhxCmbUITTFR2+VJgghEhlWSJ4uUxUjvauNdx91GUmMYpiE5QkJMBFqodSILbmFfA7rB6/VLRa9l5P6jFtpm2H05DqtQyY5nyWDVqkGQYV/qmKB+6w8TXCWHG6R0yka2Bx9Wo7IG54+XiVpuqFpg2K5PDdSfTENJH3UlTqb3aldEsEWjPszqmVwbJZ1x//sXi4KuUOu2h4M9rrKXGkvBqaOiL95UTn/2sml1djj70X3spXYsayIUfSkvgfZFwP1UZqWj8lU3YoDzUdbGMaPeCpY3/AALsi+akIamJA0WWcX6ywPEqwxqpwr0LTLNKtmMn+lpUDHmslrtloUNNfzlZSRSK2KMPNk9N54UmKb7XkhY1d0NxRg/SdlTsrDKnZV2NUzAtSSyyp2U1GpJAVZgVhoy66lUhMme8ElEHquwKQNCdiPQ02VAHJ/NaGYQCdxB1t3/kIE8oATgmKHNCZzxulQxiVg+kPTn1R7D4PC29d1G4fRZzgpKmUpUzybH9GrtcS6T5WWXU6a6faBley1WA6ws3E4Fh1AU/TrwtTPKThCNkLqEbL0PE9MZs1Y+J6c0bJOLGpWcc6l2QOpLoavTxKrVMFCVtD9MF1JA6kVruw6iNBUmFGWWFNkWg6ghOHTsVFWhULDK2KOKB0Ko/pk7MIdiQonFSHFtGpmVmg8A66rJZhnn9y0qGHMDMVg8Nldi44gmQjY1OxnZSNYt4xpUTYmhT02SmbA2n6Iw6bKkSSteG6XPKdplRgI2piJWqUKIBSNVCPQGjlOAE2bsnkbj/AEtDMctQuTF44QueEAA4oSnLxwmLh+coGC4oC7xUjiLmTp890JhSBA5w+uyhqRwRp8N1bc3w/wBqJ7NbhAGbWpz8Cs2vhtdNJ+K3X0vlrcKtWw4v2N0mh2c07CkT2+6p18L9V0zsMLjuFSxGFHzhQ4lqRy9bCnZVzhjwuiq4YfBQOwoU9SrMI4U8Jv0y2XYYcqP9OOQigszG4bwUjaA/Arxo/kp/VQigK7KYGymbZSerRerToAJRBFk/O6JtNMQmo2hM1hUrWooQICkaEgEWXxTQhBStKANKlDCqA75MdUklZmC5MUkkAC5CR9EkkDGdomKSSAIn/dAd0kkAMELmDhJJSMruYINlTxOiSSTGUnsHHKgcwcJJKRlaswcKs5MkkMFyRSSQMQTlJJADo2p0kCDCdJJMQZUgSSTQCDze6kCSSYj/2Q==" alt="derp pikachu plush" style="width:239px;height:211px">
+    <div class="header">"how do they get more" - emethah<p>yo what's jiggy</p><h2>skoldpadden</h2></div>
+    <div class="main">
+      <h1 style="text-align:center">Welcome to my website</h1>
+      <p class="versionNum" style="text-align:center">version number 1.0.0.0.0.0.2.6.5</p>
+      <h2 class="center" style="text-align:center;overflow-x:scroll">LOOoOoOoNG LonG MAAAAAAAAAaaaAaaAAAAAAAAAAAAAAAAaAAAAAAAAAAAAAAAAAAAAAAAAAn</h2>
+      <div class="center" style="text-align:center"><div class="tooltip">Add me on Discord<span class="tooltiptext">Crayola#2819</span></div></div>
+
+      <img class="center" src="data:image/jpeg;base64,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" alt="derp pikachu plush" style="width:239px;height:211px">
       
       <br>
       <br>
@@ -98,21 +168,22 @@
       <p>Here are some buttons</p>
       <button type="button" onclick="alert('hello world')">Epic Button</button>
       <button type="button" onclick="alert('pinged lmao')">The Epicer Button</button>
-      <button type="button" onclick="alert('+1000000 social credit points ^v^')">press if taiwan is not a country</button>
+      <button type="button" onclick="alert('+1000000 social credit points (>◡◔✿)')">press if taiwan is not a country</button>
       <p>They are satisfying, yes? •⌣•</p>
-      <br>
-      <h2>EFFECTIVE BUTTON DESIGN 101</h2>
-      <h3>Visual</h3>
-      <p>Usually rectangular, optionally rounded. Circles maybe.</p>
-      <p>Must look clickable: For example, button shadow.</p>
-      <p>Color should also stand out from the rest of the webpage.</p>
-      <h3>Interactive feedback</h3>
-      <p>Button and mouse should visually change when hovering over it</p>
-      <p>Button should visually change when pressed</p>
-      <h3>Text</h3>
-      <p>Use an explicit call to action. ("Sign up now" instead of "Click here for signup")</p>
-      <p>Use first person. ("See my result" instead of "See your result")</p>
-      <br>
+
+      <div class="teachBox">
+        <h2>EFFECTIVE BUTTON DESIGN 101</h2>
+        <h3>Visual</h3>
+        <p>- Shape is usually rectangular, optionally rounded. Circles work too, but no weird shapes.</p>
+        <p>- Must look like a touchable, clickable object: For example, by adding button shadow.</p>
+        <p>- The button's colour should stand out from the rest of the webpage to grab attention</p>
+        <h3>Interactive feedback</h3>
+        <p>- Button and mouse should visually change when hovering over it</p>
+        <p>- Button should visually change when pressed</p>
+        <h3>Text</h3>
+        <p>- Use an explicit call to action. ("Sign up now" instead of "Click here for signup")</p>
+        <p>- Use first person. ("See my result" instead of "See your result")</p>
+      </div>
       <h2>which is better pumpkins or melons</h2>
       <p id="pumpkin_counter">You have 0 pumpkins. :(</p>
       <button type="button" onclick="setPumpkins(0)">revoke all pumpkins</button>
@@ -121,12 +192,18 @@
       <br>
       <br>
       <h2>rate my spotify playlist</h2>
+      <button class="rateButton" id="spotifyRateButton1" onclick="alert('Your location has been traced. It is 50km away and closing. Run.')">1</button>
+      <button class="rateButton" id="spotifyRateButton2" onclick="alert('This incident has been logged, and will be reported to your supervisor.')">2</button>
+      <button class="rateButton" id="spotifyRateButton3" onclick="alert('•_•')">3</button>
+      <button class="rateButton" id="spotifyRateButton4" onclick="alert('Thank you for the feedback')">4</button>
+      <button class="rateButton" id="spotifyRateButton5" onclick="alert('^v^')">5</button>
       <iframe src="https://open.spotify.com/embed/playlist/2WfC5KQcT1w9U1BwcZ2vis?utm_source=generator" width="100%" height="380" frameBorder="0" allowfullscreen="" allow="autoplay; clipboard-write; encrypted-media; fullscreen; picture-in-picture"></iframe>
       <br>
-      <h2>funny redit video</h2>
-      <iframe id="reddit-embed" src="https://www.redditmedia.com/r/facepalm/comments/s3pu8o/dude_thinks_hes_luke_skywalker/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="621"></iframe>
-      <h3>Technical stuff</h3>
-      <p id="window.innerHeight"></p>
+<!--       <h2>funny redit video</h2> -->
+<!--       This causes a scrollbar to appear when the window width is too small, can be fixed using width=100%, like the spotify embed above ^. May cause video stretching issues ??-->
+<!--       <iframe id="reddit-embed" src="https://www.redditmedia.com/r/facepalm/comments/s3pu8o/dude_thinks_hes_luke_skywalker/?ref_source=embed&amp;ref=share&amp;embed=true" sandbox="allow-scripts allow-same-origin allow-popups" style="border: none;" scrolling="no" width="640" height="621"></iframe> -->
+<!--       <h3>Technical stuff</h3> -->
+<!--      <p id="window.innerHeight"></p>
       <p id="window.innerWidth"></p>
       <p id="window.screen.width"></p>
       <p id="window.screen.height"></p>
@@ -136,19 +213,20 @@
       <p id="window.location.href"></p>
       <p id="window.location.hostname"></p>
       <p id="window.location.pathname"></p>
-      <p id="window.location.protocol"></p>
+      <p id="window.location.protocol"></p>-->
     </div>
+    <div class="footer">ater du katten? for 10 krona?</div>
     <script>
-    document.getElementById("window.innerHeight").innerHTML = "window.innerHeight = " + window.innerHeight;
-    document.getElementById("window.innerWidth").innerHTML = "window.innerWidth = " + window.innerWidth;
-    document.getElementById("window.screen.width").innerHTML = "window.screen.width = " + window.screen.width;
-    document.getElementById("window.screen.availWidth").innerHTML = "window.screen.availWidth = " + window.screen.availWidth;
-    document.getElementById("window.screen.colorDepth").innerHTML = "window.screen.colorDepth = " + window.screen.colorDepth;
-    document.getElementById("window.screen.pixelDepth").innerHTML = "window.screen.pixelDepth = " + window.screen.pixelDepth;
-    document.getElementById("window.location.href").innerHTML = "window.location.href = " + window.location.href;
-    document.getElementById("window.location.hostname").innerHTML = "window.location.hostname = " + window.location.hostname;
-    document.getElementById("window.location.pathname").innerHTML = "window.location.pathname = " + window.location.pathname;
-    document.getElementById("window.location.protocol").innerHTML = "window.location.protocol = " + window.location.protocol;
+//     document.getElementById("window.innerHeight").innerHTML = "window.innerHeight = " + window.innerHeight;
+//     document.getElementById("window.innerWidth").innerHTML = "window.innerWidth = " + window.innerWidth;
+//     document.getElementById("window.screen.width").innerHTML = "window.screen.width = " + window.screen.width;
+//     document.getElementById("window.screen.availWidth").innerHTML = "window.screen.availWidth = " + window.screen.availWidth;
+//     document.getElementById("window.screen.colorDepth").innerHTML = "window.screen.colorDepth = " + window.screen.colorDepth;
+//     document.getElementById("window.screen.pixelDepth").innerHTML = "window.screen.pixelDepth = " + window.screen.pixelDepth;
+//     document.getElementById("window.location.href").innerHTML = "window.location.href = " + window.location.href;
+//     document.getElementById("window.location.hostname").innerHTML = "window.location.hostname = " + window.location.hostname;
+//     document.getElementById("window.location.pathname").innerHTML = "window.location.pathname = " + window.location.pathname;
+//     document.getElementById("window.location.protocol").innerHTML = "window.location.protocol = " + window.location.protocol;
     </script>
     <script>
       var pumpkins = 0;
