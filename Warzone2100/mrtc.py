@@ -172,7 +172,7 @@ html_table = build_table(mrt
                         , padding='5px 10px 5px 10px'
                         )
 
-with open('mrt.html', 'w') as f:
+with open('Warzone2100/mrt.html', 'w') as f:
     f.write(
         '<html>\n'
         + '<head><title>Minimum Research Time</title></head>\n'
