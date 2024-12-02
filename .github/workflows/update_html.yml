@@ -44,11 +44,4 @@ jobs:
           python Warzone2100/mrtc.py
           
       - name: Commit and push changes
-        run: |
-          git config --global user.name "GitHub Actions"
-          git config --global user.email "actions@github.com"
-          git add .
-          git commit -m "Update HTML file"
-          git push
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Token to authenticate push
+        uses: stefanzweifel/git-auto-commit-action@v4
