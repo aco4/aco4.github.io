@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update html:
+  update_html:
     runs-on: ubuntu-latest
     
     steps:
