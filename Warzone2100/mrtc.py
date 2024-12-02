@@ -162,9 +162,6 @@ mrt['Minimum Research Time'] = mrt['Minimum Research Time'].apply(lambda x: form
 
 from pretty_html_table import build_table
 
-with open('mrt.html', 'w') as f:
-    f.write('')
-
 html_table = build_table(mrt
                         , 'grey_dark'
                         , font_size='14px'
@@ -174,7 +171,8 @@ html_table = build_table(mrt
                         , index=True
                         , padding='5px 10px 5px 10px'
                         )
-with open('mrt.html', 'a') as f:
+
+with open('mrt.html', 'w') as f:
     f.write(
         '<html>\n'
         + '<head><title>Minimum Research Time</title></head>\n'
