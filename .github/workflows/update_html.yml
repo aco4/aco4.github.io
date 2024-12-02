@@ -21,7 +21,7 @@ concurrency:
   cancel-in-progress: false
 
 jobs:
-  update_html:
+  update html:
     runs-on: ubuntu-latest
     
     steps:
@@ -38,6 +38,10 @@ jobs:
           pip install pandas
           pip install requests
           pip install pretty_html_table
+
+      - name: Run Python script
+        run: |
+          python mrtc.py
           
       - name: Commit and push changes
         run: |
