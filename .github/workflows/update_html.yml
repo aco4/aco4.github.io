@@ -41,7 +41,7 @@ jobs:
 
       - name: Run Python script
         run: |
-          python mrtc.py
+          python Warzone2100/mrtc.py
           
       - name: Commit and push changes
         run: |
