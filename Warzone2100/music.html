@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+body {
+    font-family: Arial, sans-serif;
+    color: #f0f0f0;
+    background: #1a1a1a;
+    letter-spacing: 1px;
+}
+code {
+    background: #4a4a4a;
+    padding: 2px 2px 2px 2px;
+}
+pre {
+    background: #4a4a4a;
+    padding: 10px 20px 10px 20px;
+    letter-spacing: normal;
+}
+</style>
+</head>
+
+<body>
+<div style="width:700px; margin:auto">
+
+<h1 id="add-your-own-music-to-warzone-2100">Add your own music to Warzone 2100</h1>
+<hr>
+<h2 id="1-locate-warzone-2100s-music-folder">1. Locate Warzone 2100&#39;s music folder</h2>
+<ol>
+<li>Start Warzone 2100</li>
+<li>Click <strong>Options</strong></li>
+<li>Click <strong>Open Configuration Directory</strong> in the bottom left corner</li>
+<li>Open the <strong>music</strong> folder</li>
+</ol>
+<h2 id="2-create-an-album-to-hold-your-music">2. Create an album to hold your music</h2>
+<ol>
+<li>Create a folder called <strong>albums</strong></li>
+<li>Inside, create another folder called <strong>My Album</strong></li>
+<li>Add your song(s) in <code>.ogg</code> format.</li>
+<li>Add an album cover image and name it <code>albumcover.png</code></li>
+<li>Add a file named <code>album.json</code></li>
+</ol>
+<p>Your folder structure should look like:</p>
+<pre>music/
+└── albums/
+    └── My Album/
+        ├── album.json
+        ├── albumcover.png
+        ├── Grinder.ogg
+        └── Hell_March.ogg
+</pre>
+<h2 id="3-configure-your-album">3. Configure the album</h2>
+<p>Paste the following into <code>album.json</code>:</p>
+<pre>{
+  &quot;title&quot;: &quot;My Songs&quot;,
+  &quot;author&quot;: &quot;Various Artists&quot;,
+  &quot;date&quot;: &quot;Various Dates&quot;,
+  &quot;description&quot;: &quot;Songs I added&quot;,
+  &quot;album_cover_filename&quot;: &quot;albumcover.png&quot;,
+  &quot;tracks&quot;: [
+    {
+      &quot;filename&quot;: &quot;Hell_March.ogg&quot;,
+      &quot;title&quot;: &quot;Hell March&quot;,
+      &quot;author&quot;: &quot;Frank Klepacki&quot;,
+      &quot;default_music_modes&quot;: [&quot;campaign&quot;, &quot;challenge&quot;, &quot;skirmish&quot;, &quot;multiplayer&quot;],
+      &quot;base_volume&quot;: 100,
+      &quot;bpm&quot;: 121
+    },
+    {
+      &quot;filename&quot;: &quot;Grinder.ogg&quot;,
+      &quot;title&quot;: &quot;Grinder&quot;,
+      &quot;author&quot;: &quot;Frank Klepacki&quot;,
+      &quot;default_music_modes&quot;: [&quot;campaign&quot;, &quot;challenge&quot;, &quot;skirmish&quot;, &quot;multiplayer&quot;],
+      &quot;base_volume&quot;: 100,
+      &quot;bpm&quot;: 135
+    }
+  ]
+}
+</pre>
+<p>Modify the fields or add more tracks, as needed:</p>
+<h2 id="4-play-your-music">4. Play your music!</h2>
+<ol>
+<li>Restart Warzone 2100</li>
+<li>Wait for your song to begin playing, or play the song manually via the Music Manager.</li>
+</ol>
+
+<div style="height:200px"></div>
+</div>
